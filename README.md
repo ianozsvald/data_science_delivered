@@ -45,8 +45,7 @@ My notes
 
     -   common sources of dirty data and how to clean
 
-        -   cleaning data is necessary, nothing else works if the data
-            > is not clean
+        -   cleaning data is necessary, nothing else works if the data is not clean
 
         -   cleaning data is an on-going process
 
