@@ -75,9 +75,7 @@ My notes
 
         -   checking for text-encoded numbers like NaN and INFINITY
 
-        -   don’t patch over bad data, you forget about it and it never
-            > gets better, then you rely on the assumptions and things
-            > go bad
+        -   don’t patch over bad data, you forget about it and it never gets better, then you rely on the assumptions and things go bad
 
         -   validators that check for bad data
 
@@ -115,21 +113,15 @@ My notes
 
     -   we all have bad data, we sweep it under the carpet
 
-    -   data projects frequently killed but to inertia from having to
-        > tackle low quality data
+    -   data projects frequently killed but to inertia from having to tackle low quality data
 
-    -   bad data should be treated like bad logic - it’ll torpedo your
-        > project so it must be fixed
+    -   bad data should be treated like bad logic - it’ll torpedo your project so it must be fixed
 
-    -   bad data will keep creeping back in from new data sources and
-        > from existing data sources and from legacy data sources
+    -   bad data will keep creeping back in from new data sources and from existing data sources and from legacy data sources
 
     -   you have to actively monitor it, report on it and fix it
 
-    -   make it a red-light scenario when your data goes bad and fix it
-        > else you’ll keep running slower and slower (just like you
-        > spend more time fire-fighting if you don’t bother with a good
-        > unit-test and test management process)
+    -   make it a red-light scenario when your data goes bad and fix it else you’ll keep running slower and slower (just like you spend more time fire-fighting if you don’t bother with a good unit-test and test management process)
 
     -   O’Reilly’s Bad Data Handbook
 
