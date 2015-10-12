@@ -64,8 +64,7 @@ My notes
 
             -   unidecode, Turkish double-I problem
 
-            -   variants of dash and white space, “and &”, “copyright
-                > \[symbol\]”
+            -   variants of dash and white space, “and &”, “copyright \[symbol\]”
 
         -   normalising weights and measures
 
