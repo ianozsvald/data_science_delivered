@@ -7,9 +7,13 @@ science products. This is based on my experience, your experience may be
 very different - if so, file a Bug for me in GitHub and give me
 something to chew on.
 
-By: Ian Ozsvald
+By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/))
 
 License: Creative Commons By Attribution
+
+Location:
+[*https://github.com/ianozsvald/data\_science\_delivered*](https://github.com/ianozsvald/data_science_delivered)[
+]()
 
 Aimed at: Existing data scientists, both for those who are engineers and
 those who are researchers.
@@ -19,7 +23,19 @@ My notes
 
 -   overview of major stages in a project (conception to maintenance)
 
-    -   indented?
+    -   outline the projects
+
+    -   take a look at the data
+
+        -   [*http://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/*](http://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/)
+
+    -   determine what's feasible, define milestones, get buy-in
+
+    -   deliver a working prototype
+
+    -   deliver a deployable, maintainable and testable system
+
+    -   support the solution
 
 -   early stages
 
@@ -30,7 +46,7 @@ My notes
     -   common sources of dirty data and how to clean
 
         -   cleaning data is necessary, nothing else works if the data
-            > isn’t clean
+            > is not clean
 
         -   cleaning data is an on-going process
 
@@ -69,6 +85,34 @@ My notes
 
     -   exploration
 
+-   delivering data products
+
+    -   How a project evolves
+
+        -   Hacking, scripts
+
+        -   Reporting results
+
+        -   Pickles
+
+        -   Config
+
+        -   Modules
+
+        -   Packages
+
+        -   Testing
+
+        -   Data integrity tests
+
+        -   Speed of iteration
+
+        -   Static analysis
+
+        -   Repeatable processes
+
+        -   Online data
+
 -   the cost of bad data
 
     -   we all have bad data, we sweep it under the carpet
@@ -92,8 +136,10 @@ My notes
     -   O’Reilly’s Bad Data Handbook
 
     -   Some general notes on cost of bad data:
-        > [*https*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*://*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*econsultancy*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*.*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*com*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*/*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*blog*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*/64612-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*the*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*cost*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*of*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*bad*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*data*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*stats*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*/*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)
-        > [*http*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*://*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*techcrunch*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*.*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*com*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*/2015/07/01/*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*enterprises*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*dont*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*have*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*big*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*data*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*they*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*just*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*have*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*bad*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*data*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*/*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)
+
+        -   [*https*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*://*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*econsultancy*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*.*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*com*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*/*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*blog*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*/64612-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*the*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*cost*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*of*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*bad*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*data*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*-*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*stats*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)[*/*](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)
+
+        -   [*http*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*://*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*techcrunch*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*.*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*com*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*/2015/07/01/*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*enterprises*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*dont*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*have*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*big*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*data*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*they*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*just*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*have*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*bad*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*-*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*data*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)[*/*](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)
 
 -   solving problems with data
 
@@ -103,6 +149,12 @@ My notes
 
             -   Understanding what a RandomForest thinks is important
                 > [*http*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*://*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*nerds*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*airbnb*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*com*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*unboxing*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*the*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*random*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*forest*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*classifier*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)
+
+            -   Andrew Ng's notes
+                [*http://cs229.stanford.edu/materials/ML-advice.pdf*](http://cs229.stanford.edu/materials/ML-advice.pdf)
+
+            -   metrics
+                [*http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/*](http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/)
 
     -   regression
 
