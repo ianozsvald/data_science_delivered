@@ -137,8 +137,7 @@ My notes
 
         -   diagnosis tips:
 
-            -   Understanding what a RandomForest thinks is important
-                > [*http*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*://*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*nerds*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*airbnb*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*com*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*unboxing*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*the*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*random*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*forest*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*classifier*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)
+            -   Understanding what a RandomForest thinks is important [*http*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*://*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*nerds*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*airbnb*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*com*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*unboxing*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*the*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*random*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*forest*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*classifier*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)
 
             -   Andrew Ng's notes
                 [*http://cs229.stanford.edu/materials/ML-advice.pdf*](http://cs229.stanford.edu/materials/ML-advice.pdf)
@@ -162,8 +161,7 @@ My notes
 
         -   keep features human-readable to ease debugging
 
-        -   tokenising a lower-cased string with whitespace tokenisation
-            > and unigrams gets you a long way
+        -   tokenising a lower-cased string with whitespace tokenisation and unigrams gets you a long way
 
 -   building useful tools
 
@@ -205,9 +203,7 @@ My notes
 
     -   not logging the right data
 
-    -   not automating your data-edit process for production data (you
-        > mustn’t edit this stuff by hand as you’ll have multiple
-        > environments over time)
+    -   not automating your data-edit process for production data (you mustn’t edit this stuff by hand as you’ll have multiple environments over time)
 
     -   not automating the logging/scraping of data
 
@@ -221,22 +217,17 @@ My notes
 
     -   not having a sensible schema
 
-        -   mixing “” None Id(0) “none” “NOTPRESENT” to all indicate a
-            > Null condition in the same dataset
+        -   mixing “” None Id(0) “none” “NOTPRESENT” to all indicate a Null condition in the same dataset
 
-        -   having different applications (e.g. Mongo driven by C\# and
-            > Python with different LUIDs) write data in similar but
-            > incompatible ways
+        -   having different applications (e.g. Mongo driven by C\# and Python with different LUIDs) write data in similar but incompatible ways
 
-    -   data lakes are probably a better idea then never-finished
-        > perfect schemas
+    -   data lakes are probably a better idea then never-finished perfect schemas
 
     -   lack of monitoring and lack of acting on the monitored result
 
         -   write data validator scripts and run them religiously
 
-        -   when data goes wrong, make it a high priority else it’ll
-            > poison later work
+        -   when data goes wrong, make it a high priority else it’ll poison later work
 
     -   use testing to limit problems
 
@@ -262,8 +253,7 @@ My notes
 
     -   jupyter notebook
 
-    -   argparse and os.env to get default configurations from
-        > environment
+    -   argparse and os.env to get default configurations from environment
 
     -   progressbar33 / tqdm
 
@@ -281,5 +271,4 @@ My notes
 
 -   tools and processes I’d like to better understand
 
-    -   deduplication of similar text items (e.g. synonyms, punctuation
-        > variants of a string, pluralised strings)
+    -   deduplication of similar text items (e.g. synonyms, punctuation variants of a string, pluralised strings)
