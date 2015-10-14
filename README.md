@@ -144,7 +144,7 @@ My notes
             -   metrics
                 [*http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/*](http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/)
 
-            - Visualise a correlation matrix for your features if you have a small number (e.g. <20 features). You might also visualise the similarities as a force network graph ([photo](https://twitter.com/lc0d3r/status/654226497893453824)] using NetworkX or Gephi.
+            - Visualise a correlation matrix for your features if you have a small number (e.g. <20 features). You might also visualise the similarities as a force network graph ( [photo](https://twitter.com/lc0d3r/status/654226497893453824) ] using NetworkX or Gephi.
 
     -   regression
 
