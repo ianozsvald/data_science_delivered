@@ -60,7 +60,7 @@ My notes
 
         -   cleaning broken text
 
-            -   [ftfy[(https://github.com/LuminosoInsight/python-ftfy] to fix bad encodings
+            -   [ftfy](https://github.com/LuminosoInsight/python-ftfy] to fix bad encodings
 
             -   poor specification of encoding - requires some checking on your part
             - [Chromium Compact Language Detector](https://pypi.python.org/pypi/chromium_compact_language_detector/) - identifies human language type
