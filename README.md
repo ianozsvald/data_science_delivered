@@ -5,7 +5,7 @@ About: Short document summarising Ian's thoughts on successful ways (and
 ways to avoid!) to ship working, maintainable and understandable data
 science products. This is based on my experience, your experience may be
 very different - if so, file a Bug for me in GitHub and give me
-something to chew on.
+something to chew on. I've put this together based on my talking, teaching and coaching.
 
 By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/))
 
@@ -15,8 +15,7 @@ Location:
 [*https://github.com/ianozsvald/data\_science\_delivered*](https://github.com/ianozsvald/data_science_delivered)[
 ]()
 
-Aimed at: Existing data scientists, both for those who are engineers and
-those who are researchers.
+Aimed at: Existing data scientists, both for those who are engineers and those who are researchers. 
 
 My notes
 --------
@@ -268,7 +267,3 @@ My notes
     -   pypy
 
     -   multiprocessing
-
--   tools and processes I’d like to better understand
-
-    -   deduplication of similar text items (e.g. synonyms, punctuation variants of a string, pluralised strings)
