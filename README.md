@@ -144,6 +144,8 @@ My notes
             -   metrics
                 [*http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/*](http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/)
 
+            - Visualise a correlation matrix for your features if you have a small number (e.g. <20 features). You might also visualise the similarities as a force network graph ([photo](https://twitter.com/lc0d3r/status/654226497893453824)] using NetworkX or Gephi.
+
     -   regression
 
         -   diagnosis tips:
@@ -220,9 +222,9 @@ My notes
 
     -   not having a sensible schema
 
-        -   mixing `“” None Id(0) “none” “NOTPRESENT” ""` to all indicate a Null condition in the same dataset
+        -   mixing `"" None Id(0) "none" "NOTPRESENT"` to all indicate a Null condition in the same dataset, this is a really bad idea and will lead to confusion. Fix on using only 1 Null value.
 
-        -   having different applications (e.g. Mongo driven by C\# and Python with different LUIDs) write data in similar but incompatible ways
+        -   having different applications (e.g. MongoDB driven by C\# and Python with [different Legacy UUIDs](http://3t.io/blog/best-practices-uuid-mongodb/)) write data in similar but incompatible ways
 
     -   data lakes are probably a better idea then never-finished perfect schemas
 
