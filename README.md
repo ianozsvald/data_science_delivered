@@ -20,7 +20,7 @@ Aimed at: Existing data scientists, both for those who are engineers and those w
 My notes
 --------
 
--   overview of major stages in a project (conception to maintenance)
+-   overview of the major stages in a data project (from conception to maintenance)
 
     -   outline the projects
 
@@ -29,6 +29,7 @@ My notes
         -   [*http://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/*](http://simplystatistics.org/2014/06/13/what-i-do-when-i-get-a-new-data-set-as-told-through-tweets/)
 
     -   determine what's feasible, define milestones, get buy-in
+        - keep the scope small and sane (especially if you're not confident about your data or how you'll solve the aspirational goals of the project)
 
     -   deliver a working prototype
 
@@ -44,7 +45,7 @@ My notes
 
     -   discovery - what's feasible? what's valuable? how far might this project go?
 
-    -   common sources of dirty data and how to clean
+    -   dirty data
 
         -   cleaning data is necessary, nothing else works if the data is not clean
 
@@ -55,13 +56,14 @@ My notes
 
         -   write validators that check for bad data - run them regularly, report exceptions to the specification, treat this as a _red flag_ event and try to get to the source of the problem (and patch up broken data before you forget about it)
 
-    - text
+    - dirty text data
 
         -   cleaning broken text
 
-            -   ftfy
+            -   [ftfy[(https://github.com/LuminosoInsight/python-ftfy] to fix bad encodings
 
-            -   poor specification of encoding
+            -   poor specification of encoding - requires some checking on your part
+            - [Chromium Compact Language Detector](https://pypi.python.org/pypi/chromium_compact_language_detector/) - identifies human language type
 
             -   HTML entites
 
@@ -77,42 +79,47 @@ My notes
 
             -   no tool to recognise these?
 
-    - numbers
+    - dirty numeric data
 
-        -   numeric outliers for normally distributed numbers
+        -   numeric outliers for normally distributed numbers - checking the values outside of a couple of standard deviations is a sane starting point
+        - checking for outliers in a non-stationery dataset (e.g. a time series of prices) is trickier (READER - what's a good starting point?)
 
-        -   checking for text-encoded numbers like NaN and INFINITY
+        -   check for text-encoded numbers like NaN and INFINITY, they confuse things when parsed!
 
 
     -   exploration
+        - for numbers - figure out what distributions and examples you have. what are your outliers? are the outliers reasonable or the result of bad data?
+        - for text - what examples do you have? how long and short are the strings? what character sets are used? do you care about case, accents, punctuation?
 
 -   delivering data products
 
     -   How a project evolves
 
-        -   Hacking, scripts
+        - Get your data (and expect to have to fetch more, it is fine to start with a sensible subset of the possible data - aim for Small Data that fits in RAM at the start to keep your exploration speed high)
 
-        -   Reporting results
+        -   Hacking, scripts (knock out lots of ideas)
 
-        -   Pickles
+        -   Reporting results (tell a story, get someone to validate your assumptions, do a code review as a sanity check)
 
-        -   Config
+        -   Pickles (you'll have partial results you want to store, a `pickle` is a reasonable way to store early-stage results)
 
-        -   Modules
+        -   Configuration (make it run on other machines e.g. for colleagues or for deployment or other configurations like test, staging and deployment)
 
-        -   Packages
+        -   Modules (use `__init__.py` in folders to group code into logical units)
 
-        -   Testing
+        -   Packages (make your code distributable using `setup.py`)
 
-        -   Data integrity tests
+        -   Testing (check `unittest.py` and [py.test](http://pytest.org/latest/))
 
-        -   Speed of iteration
+        -   Data integrity tests (make sure your data actually contains what you expect - you can easily ignore this step and easily write a solution that lies to you - _be very wary of skipping this_)
 
-        -   Static analysis
+        -   Speed of iteration (it gets slower as the code gets bigger, it is also likely that more bugs slip in which occasionally will _really_ slow you down)
 
         -   Repeatable processes
 
-        -   Online data
+        -   Online data (we've gone from a static lump of data to needing to update our models with new data - how do we do this and deploy it within our unique operating constraints?)
+
+        - Big Data (maybe you really have a Big Data problem - now you've figured out how to solve the problem on a subset of the data you need to figure out how to deploy this in a cluster)
 
 -   the cost of bad data
 
@@ -144,13 +151,12 @@ My notes
 
         -   diagnosis tips:
 
-            -   Understanding what a RandomForest thinks is important [*http*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*://*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*nerds*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*airbnb*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*.*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*com*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*unboxing*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*the*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*random*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*forest*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*-*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*classifier*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)[*/*](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)
-
             -   Andrew Ng's notes
                 [*http://cs229.stanford.edu/materials/ML-advice.pdf*](http://cs229.stanford.edu/materials/ML-advice.pdf)
 
             -   metrics
                 [*http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/*](http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/)
+            - [Unboxing the Random Forest Classifier: The Threshold Distributions](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)
 
             - Visualise a [confusion matrix](http://scikit-learn.org/stable/auto_examples/model_selection/plot_confusion_matrix.html) for the resulting classifications.
 
@@ -214,6 +220,14 @@ My notes
 
     -   KISS - explainable answers probably beat having the best score
 
+    - deployment options to machines:
+        - Amazon EC2 / other cloud providers, probably using Docker
+        - [YHatHQ](http://www.yhathq.com/)
+        - [SenseIO](https://sense.io/)
+        - [Flask](http://flask.pocoo.org/) with Swagger documentation
+        - [Django REST](http://www.django-rest-framework.org/)
+        - [Eve](http://python-eve.org/) - Python + Flask and Mongo or SQL storage
+
 -   engineering concerns (how stuff goes wrong)
 
     -   not logging the right data
@@ -256,9 +270,10 @@ My notes
 
         -   you can store sparse data on disk with hdf5 and compression
 
-    -   pickles of dicts are good for persisting python objects
+    -   pickles of `dicts` are good for persisting python objects
 
-        -   add a timestamp and maybe a git commit for traceability
+        - add a timestamp and maybe a git commit for traceability and a notes key in a `dict` along with your data (which might be `numpy` arrays, `dataframes` etc)
+        - have a script that visits all your pickles, loads them in and reports the build-time, label and notes so you can quickly check what's deployed 
 
 -   useful python tools
 
