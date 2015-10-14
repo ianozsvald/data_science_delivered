@@ -132,6 +132,8 @@ My notes
 
 -   solving problems with data
 
+    - O'Reilly's notes on [Evaluating Machine Learning Models](http://www.oreilly.com/data/free/evaluating-machine-learning-models.csp)
+
     -   classification
 
         -   diagnosis tips:
