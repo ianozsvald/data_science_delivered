@@ -220,7 +220,7 @@ My notes
 
     -   not having a sensible schema
 
-        -   mixing “” None Id(0) “none” “NOTPRESENT” to all indicate a Null condition in the same dataset
+        -   mixing `“” None Id(0) “none” “NOTPRESENT” ""` to all indicate a Null condition in the same dataset
 
         -   having different applications (e.g. Mongo driven by C\# and Python with different LUIDs) write data in similar but incompatible ways
 
