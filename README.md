@@ -39,8 +39,10 @@ My notes
 -   early stages
 
     -   sources of data
+        - don't forget external data (e.g. OpenData) and licensable data
+        - joining external data to internal data might be tricky (you probably lack a decent join key)
 
-    -   discovery
+    -   discovery - what's feasible? what's valuable? how far might this project go?
 
     -   common sources of dirty data and how to clean
 
@@ -49,6 +51,11 @@ My notes
         -   cleaning data is an on-going process
 
         -   low quality data breaks everything
+        -   don’t patch over bad data, you forget about it and it never gets better, then you rely on the assumptions and things go bad
+
+        -   write validators that check for bad data - run them regularly, report exceptions to the specification, treat this as a _red flag_ event and try to get to the source of the problem (and patch up broken data before you forget about it)
+
+    - text
 
         -   cleaning broken text
 
@@ -70,13 +77,12 @@ My notes
 
             -   no tool to recognise these?
 
+    - numbers
+
         -   numeric outliers for normally distributed numbers
 
         -   checking for text-encoded numbers like NaN and INFINITY
 
-        -   don’t patch over bad data, you forget about it and it never gets better, then you rely on the assumptions and things go bad
-
-        -   validators that check for bad data
 
     -   exploration
 
