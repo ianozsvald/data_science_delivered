@@ -74,7 +74,7 @@ My notes
             -   variants of dash and white space, `and &`, `copyright ©`
 
         - normalising synonyms
-            - (ish)[https://github.com/judy2k/ish] has synonyms for common terms like "yes, yep, yup, ..."
+            - [ish](https://github.com/judy2k/ish) has synonyms for common terms like "yes, yep, yup, ..."
 
         -   normalising weights and measures
 
