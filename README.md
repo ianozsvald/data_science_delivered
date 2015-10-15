@@ -218,13 +218,13 @@ My notes
 
     -   adding tests
 
-        -   py.test
+        -   [py.test](http://pytest.org/latest/) to write cleaner tests than with Python's built-in `unittest.py` tests
 
-        -   coverage
+        -   [coverage](https://pypi.python.org/pypi/coverage) to figure out if you're actually testing all of your code (so you can figure out which bits need the urgent addition of tests!)
 
-        -   hypothesis
+        -   [hypothesis](https://github.com/DRMacIver/hypothesis) for fuzzing your unit tests and finding blind spots you missed (use this in _addition_ to your regular tests, not as a replacment for them)
 
-        -   engarde
+        -   [engarde](https://github.com/TomAugspurger/engarde) to add constraints to your DataFrames
 
     -   making a package
 
