@@ -74,6 +74,7 @@ My notes
             -   variants of dash and white space, `and &`, `copyright ©`
 
         - normalising synonyms
+            - probably having many synonymous words for the same "thing" you're working on is a bad idea (e.g. company name variants like RBS and The Royal Bank of Scotland, skill names that in your problem are synonymous-enough like C# and .net (this decision is problem-specific), product name variants like MS VC 2000 and Microsoft Visual Studio 2000) as the variants water down the signal, you should probably map these to canonical representations to reduce the variation in labelling
             - [ish](https://github.com/judy2k/ish) has synonyms for common terms like "yes, yep, yup, ..."
 
         -   normalising weights and measures
