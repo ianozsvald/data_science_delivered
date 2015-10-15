@@ -62,10 +62,10 @@ My notes
 
             -   [ftfy](https://github.com/LuminosoInsight/python-ftfy) to fix bad encodings
 
-            -   poor specification of encoding - requires some checking on your part
+            -   poor specification of encoding - requires some checking on your part to make sensible guesses - often text "looks like" UTF8 but might actually be encoded in Windows [CP-1252](https://en.wikipedia.org/wiki/Windows-1252) which encodes smart-quotes differently to disk
             - [Chromium Compact Language Detector](https://pypi.python.org/pypi/chromium_compact_language_detector/) - identifies human language type
 
-            -   HTML entites
+            -   HTML entity decoding (Python's [unescape](https://docs.python.org/3/library/html.html) does a sensible job for the basic entities)
 
         -   normalising unicode variants (text, punctuation)
 
@@ -74,8 +74,9 @@ My notes
             -   variants of dash and white space, `and &`, `copyright ©`
 
         - normalising synonyms
-            - probably having many synonymous words for the same "thing" you're working on is a bad idea (e.g. company name variants like RBS and The Royal Bank of Scotland, skill names that in your problem are synonymous-enough like C# and .net (this decision is problem-specific), product name variants like MS VC 2000 and Microsoft Visual Studio 2000) as the variants water down the signal, you should probably map these to canonical representations to reduce the variation in labelling
+            - probably having many synonymous words for the same "thing" you're working on is a bad idea (e.g. company name variants like RBS and The Royal Bank of Scotland, and product name variants like MS VC 2000 and Microsoft Visual Studio 2000) as the variants water down the signal, you should probably map these to canonical representations to reduce the variation in labelling. This only applies if you want the aggregate signal for the "common items" rather than the exact signal for each named variation
             - [ish](https://github.com/judy2k/ish) has synonyms for common terms like "yes, yep, yup, ..."
+            - [unidecode](https://pypi.python.org/pypi/Unidecode) strips "funny accents" to remove variation in your text, this is useful if people write the same thing in different ways (e.g. Société Générale and Societe Generale will both be written by regular people to mean the same company)
 
         -   normalising weights and measures
 
@@ -98,10 +99,11 @@ My notes
     -   exploration
         - for numbers - figure out what distributions and examples you have. what are your outliers? are the outliers reasonable or the result of bad data?
         - for text - what examples do you have? how long and short are the strings? what character sets are used? do you care about case, accents, punctuation?
+        - what kind of variations do you have in your data? what's normal? Seaborn's [pairplot](https://web.stanford.edu/~mwaskom/software/seaborn/generated/seaborn.pairplot.html) does a great job on small sets of numerical data
 
 -   delivering data products
 
-    -   How a project evolves
+    -   How a project can evolve
 
         - Get your data (and expect to have to fetch more, it is fine to start with a sensible subset of the possible data - aim for Small Data that fits in RAM at the start to keep your exploration speed high)
 
@@ -133,13 +135,13 @@ My notes
 
     -   we all have bad data, we sweep it under the carpet
 
-    -   data projects frequently killed but to inertia from having to tackle low quality data
-
     -   bad data should be treated like bad logic - it’ll torpedo your project so it must be fixed
 
-    -   bad data will keep creeping back in from new data sources and from existing data sources and from legacy data sources
+    -   bad data will keep creeping back in from new data sources and from existing data sources and from legacy data sources, if you don't monitor for it then you won't see this (and later it'll just be painful to deal with)
 
     -   you have to actively monitor it, report on it and fix it
+
+    - bad data will add a "development tax" on your work, it'll incrementally slow you down and over time it can cause your project to stall when the whole teams switches for months just to clean the data so it can be useful again
 
     -   make it a red-light scenario when your data goes bad and fix it else you’ll keep running slower and slower (just like you spend more time fire-fighting if you don’t bother with a good unit-test and test management process)
 
@@ -170,6 +172,9 @@ My notes
 
             - Visualise a correlation matrix for your features if you have a small number (e.g. <20 features). You might also visualise the similarities as a force network graph ([photo](https://twitter.com/lc0d3r/status/654226497893453824)) using NetworkX or Gephi.
 
+            - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts. What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels? 
+            - Which classifications always sit on the decision boundary (e.g. items with a 50/50 probability of being in one of two classes)? Why can't the model confidently move the examples to the right class?
+
     -   regression
 
         -   diagnosis tips:
@@ -191,6 +196,15 @@ My notes
         -   keep features human-readable to ease debugging
 
         -   tokenising a lower-cased string with whitespace tokenisation and unigrams gets you a long way
+
+        - for two-class text classification (e.g. spam, "is user of typeX") the following configuration is a sane base-case starting point:
+            - assumption - normal-human-possible classification task (i.e. one with lots of redundancy that a regular human can easily solve)
+            - lowercased, uni-decoded unigram features
+            - bag of words (i.e. without order or frequency counts)
+            - Bernulli Naive Bayes (by default scikit learn's BNB takes care of unbalanced data sets)
+            - maybe just use a dummy classifier that uses some regular expressions (i.e. driven by human insight rather than ML) for a super-easy-to-diagnose classification approach
+            - don't be in a rush to go to complex models and features sets until you know why you need the complexity
+            - tfidf scaling is useful for variable length documents (e.g. pages of wikipedia text) but if your text is roughly the same length (e.g. tweets) then scaling is less useful
 
 -   building useful tools
 
