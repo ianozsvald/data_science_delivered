@@ -77,6 +77,9 @@ My notes
             - [ish](https://github.com/judy2k/ish) has synonyms for common terms like "yes, yep, yup, ..."
             - [unidecode](https://pypi.python.org/pypi/Unidecode) strips "funny accents" to remove variation in your text, this is useful if people write the same thing in different ways (e.g. Société Générale and Societe Generale will both be written by regular people to mean the same company)
 
+        - normalising text terms
+            - often names can be written in different orders e.g. "Ian Ozsvald" and (in Hungary) "Ozsvald Ian", with no other indication of the reversed encoding
+
         -   normalising weights and measures
 
             -   astropy etc?
