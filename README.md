@@ -69,9 +69,8 @@ My notes
 
         -   normalising unicode variants (text, punctuation)
 
-            -   unidecode, Turkish double-I problem
-
-            -   variants of dash and white space, `and &`, `copyright ©`
+            - problems for decoding non-English alphabets like the [Turkish Double I](https://en.wikipedia.org/wiki/Dotted_and_dotless_I) and the (horrible) associated stories of murder on that page
+            -   variants of dash (e.g. 40 variants are [listed](https://en.wikipedia.org/wiki/Dash)) and white space (including non-breaking whitespace, [examples](https://en.wikipedia.org/wiki/Whitespace_character)), `and &`, `copyright ©` etc
 
         - normalising synonyms
             - probably having many synonymous words for the same "thing" you're working on is a bad idea (e.g. company name variants like RBS and The Royal Bank of Scotland, and product name variants like MS VC 2000 and Microsoft Visual Studio 2000) as the variants water down the signal, you should probably map these to canonical representations to reduce the variation in labelling. This only applies if you want the aggregate signal for the "common items" rather than the exact signal for each named variation
