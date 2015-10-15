@@ -1,19 +1,19 @@
 Data Science Delivered
 ======================
 
-About: Short document summarising Ian's thoughts on successful ways (and
-ways to avoid!) to ship working, maintainable and understandable data
-science products. This is based on my experience, your experience may be
+About: Short document summarising Ian's thoughts on successful ways to ship working, maintainable and understandable data
+science products and ways to avoid falling into dark holes of despair. This is based on my experience, your experience may be
 very different - if so, file a Bug for me in GitHub and give me
-something to chew on. I've put this together based on my talking, teaching and coaching.
+something to chew on. 
 
-By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/))
+Very roughly these are "notes from me to myself 10 years ago", I hope you find some of this to be useful. I've put this together based on my talking, teaching and coaching along with feedback from chats at our [PyDataLondon](http://www.meetup.com/PyData-London-Meetup/) data group.
+
+By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/)) of [ModelInsight](http://modelinsight.io/)
 
 License: Creative Commons By Attribution
 
 Location:
-[*https://github.com/ianozsvald/data\_science\_delivered*](https://github.com/ianozsvald/data_science_delivered)[
-]()
+[*https://github.com/ianozsvald/data\_science\_delivered*](https://github.com/ianozsvald/data_science_delivered)
 
 Aimed at: Existing data scientists, both for those who are engineers and those who are researchers. 
 
@@ -73,11 +73,18 @@ My notes
 
             -   variants of dash and white space, `and &`, `copyright ©`
 
+        - normalising synonyms
+            - (ish)[https://github.com/judy2k/ish] has synonyms for common terms like "yes, yep, yup, ..."
+
         -   normalising weights and measures
 
             -   astropy etc?
 
             -   no tool to recognise these?
+
+        - encoding text categories for machine learning
+            - Pandas has a [get_dummies](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.get_dummies.html) which performs naieve encoding
+            - [Patsy](http://statsmodels.sourceforge.net/devel/contrasts.html) has a richer set of encoding options and tries to remove redundant encodings
 
     - dirty numeric data
 
@@ -222,11 +229,17 @@ My notes
 
     - deployment options to machines:
         - Amazon EC2 / other cloud providers, probably using Docker
-        - [YHatHQ](http://www.yhathq.com/)
-        - [SenseIO](https://sense.io/)
+        - [YHatHQ](http://www.yhathq.com/) (TODO link to @springcoil's yhat talk from pyconireland)
         - [Flask](http://flask.pocoo.org/) with Swagger documentation
         - [Django REST](http://www.django-rest-framework.org/)
         - [Eve](http://python-eve.org/) - Python + Flask and Mongo or SQL storage
+
+- storing data
+    - MySQL
+        - Unicode text is 3-byte `utf8` by default (so it only encodes the Basic Multilingual Plane and not the Supplementary Planes) and so silently loses data that doesn't look "Western-like", use [`utf8mb4`](https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html) instead
+
+    - MongoDB
+        - Schemaless by default (this hopefully changes in 2015), this makes it quick for iteration and rubbish for data integrity later when you have an engineering mindset (write your own validation & reporting code that checks your schema is met to avoid going crazy)
 
 -   engineering concerns (how stuff goes wrong)
 
