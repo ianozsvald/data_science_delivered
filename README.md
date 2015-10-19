@@ -246,7 +246,7 @@ My notes
 
     - deployment options to machines:
         - Amazon EC2 / other cloud providers, probably using Docker
-        - [YHatHQ](http://www.yhathq.com/) (TODO link to @springcoil's yhat talk from pyconireland)
+        - [YHatHQ](http://www.yhathq.com/) @springcoil [has notes](https://speakerdeck.com/springcoil/putting-data-science-models-into-production)
         - [Flask](http://flask.pocoo.org/) with Swagger documentation
         - [Django REST](http://www.django-rest-framework.org/)
         - [Eve](http://python-eve.org/) - Python + Flask and Mongo or SQL storage
