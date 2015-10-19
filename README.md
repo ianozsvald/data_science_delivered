@@ -184,8 +184,8 @@ My notes
             -   &lt;TODO&gt;
 
 
-    - Unit-testing on scikit-learn models
-        - Valerio Maggio's talk at BudapestBI Forum 2015 on [Machine Learning Under Test](https://budapestbi2015.sched.org/event/02b6848e6c63be71fcc2ab2ee14a84eb#.Vh5J9JfRJyQ)
+    - (Unit) Testing on scikit-learn models
+        - Valerio Maggio's talk at BudapestBI Forum 2015 on [Machine Learning Under Test](https://speakerdeck.com/valeriomaggio/machine-learning-under-test-at-biforum2015) from [BudapestBIForum 2015](https://budapestbi2015.sched.org/event/02b6848e6c63be71fcc2ab2ee14a84eb#.Vh5J9JfRJyQ) covers numeric precision (e.g. almost-equal, unit least precision), measures of generalisation error (e.g. cross validation, accuracy measures), hyperparameters
 
     -   natural language processing
 
