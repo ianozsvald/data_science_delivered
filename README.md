@@ -262,7 +262,7 @@ My notes
 
     - MongoDB
         - Schemaless by default (this hopefully changes in 2015), this makes it quick for iteration and rubbish for data integrity later when you have an engineering mindset (write your own validation & reporting code that checks your schema is met to avoid going crazy)
-        - [Monary](https://monary.readthedocs.org/) lets you read MongoDB data->Python around 10* faster 
+        - [Monary](https://monary.readthedocs.org/) lets you read MongoDB data->Python around 10* faster ([talk](https://github.com/braz/pycon2015_talk))
 
 -   engineering concerns (how stuff goes wrong)
 
