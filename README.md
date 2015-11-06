@@ -334,9 +334,7 @@ My notes
 
 -   higher performance python
 
-    -   numba on numpy data
-
-    -   pypy
-
+    -   [Numba](http://numba.pydata.org/) compiles Python `numpy` operations (particularly for-loops on `numpy` arrays) using LLVM, this is a very sane first thing to try
+    -   [PyPy](http://pypy.org/) works great on non-numpy code, if you have pure-Python CPU-bound code then definitely try PyPY
     -   `multiprocessing` lets you parallelise stuff on a single machine 
     - don't be in a rush to go to a cluster-solution (e.g. Spark) unless you really need it, it is fine to rent an Amazon EC2 machine with 32 cores for a couple of dollars an hour using `multiprocessing` and the exact same code will run on your laptop which eases your dev/debug cycle
