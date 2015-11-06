@@ -221,6 +221,7 @@ My notes
     -   adding tests
 
         -   [py.test](http://pytest.org/latest/) to write cleaner tests than with Python's built-in `unittest.py` tests
+            - you can run `py.test -s` to see `stdout` (which otherwise is hidden unless the tests fail) and `py.test -s -pdb` to drop into the Python debugger on a failure (so you get dropped in to [pdb](https://docs.python.org/3/library/pdb.html) to do live debugging)
 
         -   [coverage](https://pypi.python.org/pypi/coverage) to figure out if you're actually testing all of your code (so you can figure out which bits need the urgent addition of tests!)
 
@@ -295,7 +296,7 @@ My notes
     -   use testing to limit problems
 
 - coding sensible practices
-    - don't copy/paste magic numbers around your code, instead use the constant-convention with an upper-cased variable like `OFFSET=53.9` and use `OFFSET` throughout your code (rather than `53.9`). This is especially useful if you have two different magic numbers that mean differnets things (e.g. `10` used in two different contexts), having a spelt-out variable makes the intent much when you return to this code months later.
+    - don't copy/paste magic numbers around your code, instead use the constant-convention with an upper-cased variable like `OFFSET=53.9` and use `OFFSET` throughout your code (rather than `53.9`). This is especially useful if you have two different magic numbers that mean differnets things (e.g. `10` used in two different contexts), having a spelt-out variable makes the intent much clearer when you return to this code months later.
     - if you find yourself copy/pasting a block of code (e.g. a few lines that make a new database connection or do a common data manipulation) then strongly think about refactoring this into a function, it'll make support easier and your code will get shorter (so there's fewer lines to hide bugs)
     
 
