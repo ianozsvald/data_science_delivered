@@ -262,6 +262,7 @@ My notes
 
     - MongoDB
         - Schemaless by default (this hopefully changes in 2015), this makes it quick for iteration and rubbish for data integrity later when you have an engineering mindset (write your own validation & reporting code that checks your schema is met to avoid going crazy)
+        - (Monary)[https://monary.readthedocs.org/] lets you read MongoDB data->Python around 10* faster 
 
 -   engineering concerns (how stuff goes wrong)
 
@@ -333,8 +334,9 @@ My notes
 
 -   higher performance python
 
-    -   numba on numpy
+    -   numba on numpy data
 
     -   pypy
 
-    -   multiprocessing
+    -   `multiprocessing` lets you parallelise stuff on a single machine 
+    - don't be in a rush to go to a cluster-solution (e.g. Spark) unless you really need it, it is fine to rent an Amazon EC2 machine with 32 cores for a couple of dollars an hour using `multiprocessing` and the exact same code will run on your laptop which eases your dev/debug cycle
