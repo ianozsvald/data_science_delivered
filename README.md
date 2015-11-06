@@ -164,6 +164,12 @@ My notes
 
     - O'Reilly's notes on [Evaluating Machine Learning Models](http://www.oreilly.com/data/free/evaluating-machine-learning-models.csp)
 
+    - a rough process for machine learning:
+        - it is fine to focus on your training data only at first (before you have a useful model) - if you can't (over)fit your training data then you'll have no joy with your test data
+        - identify what your model can't fit in your data, don't guess, diagnose it (at the start this is a great way to spot broken data or missing features that you took for granted!)
+        - switch to using 10-fold Cross Validation once you can over-fit your training data, CV will give you an idea about how well you generalise for predicting the real world
+        - now start to diagnose what the model gets wrong on your test data
+
     -   classification
 
         -   diagnosis tips:
