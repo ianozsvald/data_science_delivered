@@ -116,6 +116,9 @@ My notes
         - [Enterprises Don’t Have Big Data, They Just Have Bad Data](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)
 
 - dealing with dirty data
+    - talks on dirty data
+        - ["Dirty Data"](http://www.slideshare.net/godatadriven/dirty-data-by-friso-van-vollenhoven) by Friso van Vollenhoven (notes the Icelandic Thorn issue, bad date encodinngs)
+        - ["Cleaning Confused Collections of Characters"](http://ianozsvald.com/2015/04/03/pydataparis-2015-and-cleaning-confused-collections-of-characters/) my thoughts on ways through extracting and cleaning text
     - dirty text data
 
         -   cleaning broken text
