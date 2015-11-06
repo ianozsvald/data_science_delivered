@@ -341,3 +341,7 @@ My notes
     - Robert's [line_profiler](https://github.com/rkern/line_profiler) is my go-to profiling tool for speed issues
     - Fabian's [memory_profiler](https://pypi.python.org/pypi/memory_profiler) is my go-to tool for memory-based profiling
     - [High Performance Python](http://shop.oreilly.com/product/0636920028963.do) - my book covers a lot of this stuff
+
+
+- Building data teams
+    - ["The Emerging Role of Data Scientists on Software Development Teams"](http://research.microsoft.com/apps/pubs/default.aspx?id=242286) by Microsoft Research categorises how different team-types might work and how career progression might work
