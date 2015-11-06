@@ -338,3 +338,6 @@ My notes
     -   [PyPy](http://pypy.org/) works great on non-numpy code, if you have pure-Python CPU-bound code then definitely try PyPY
     -   `multiprocessing` lets you parallelise stuff on a single machine 
     - don't be in a rush to go to a cluster-solution (e.g. Spark) unless you really need it, it is fine to rent an Amazon EC2 machine with 32 cores for a couple of dollars an hour using `multiprocessing` and the exact same code will run on your laptop which eases your dev/debug cycle
+    - Robert's [line_profiler](https://github.com/rkern/line_profiler) is my go-to profiling tool for speed issues
+    - Fabian's [memory_profiler](https://pypi.python.org/pypi/memory_profiler) is my go-to tool for memory-based profiling
+    - [High Performance Python](http://shop.oreilly.com/product/0636920028963.do) - my book covers a lot of this stuff
