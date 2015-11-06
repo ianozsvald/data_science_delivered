@@ -248,12 +248,14 @@ My notes
 
     - deployment options to machines:
         - Amazon EC2 / other cloud providers, probably using Docker
+        - [Featherweight](https://github.com/ianozsvald/featherweight_web_api) super lightweight server for publishing R&D Python functions as JSON web functions
         - [YHatHQ](http://www.yhathq.com/) @springcoil [has notes](https://speakerdeck.com/springcoil/putting-data-science-models-into-production)
         - [Flask](http://flask.pocoo.org/) with Swagger documentation
         - [Django REST](http://www.django-rest-framework.org/)
         - [Eve](http://python-eve.org/) - Python + Flask and Mongo or SQL storage
 
 - storing data
+    - add constraints to your datastore whenever possible, probably they're granular (e.g. text only with N characters, ints-only and Nulls are allowed) with the wrong level of granularity (you might want lower-case hex-like ASCII UUID strings only or positive numbers for addresses within a certain range), but some constraints are *much better* than no constraints
     - MySQL
         - Unicode text is 3-byte `utf8` by default (so it only encodes the Basic Multilingual Plane and not the Supplementary Planes) and so silently loses data that doesn't look "Western-like", use [`utf8mb4`](https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html) instead
 
