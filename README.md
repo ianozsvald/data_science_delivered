@@ -255,7 +255,7 @@ My notes
         - [Eve](http://python-eve.org/) - Python + Flask and Mongo or SQL storage
 
 - storing data
-    - add constraints to your datastore whenever possible, probably they're granular (e.g. text only with N characters, ints-only and Nulls are allowed) with the wrong level of granularity (you might want lower-case hex-like ASCII UUID strings only or positive numbers for addresses within a certain range), but some constraints are *much better* than no constraints
+    - add constraints to your datastore whenever possible, probably they're granular (e.g. text only with N characters, ints-only and Nulls are allowed) with the wrong level of granularity (you might want lower-case hex-like ASCII UUID strings only or positive numbers for addresses within a certain range), but some constraints are *much better* than no constraints. Constraints between key fields in tables are also very sensible.
     - MySQL
         - Unicode text is 3-byte `utf8` by default (so it only encodes the Basic Multilingual Plane and not the Supplementary Planes) and so silently loses data that doesn't look "Western-like", use [`utf8mb4`](https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html) instead
 
@@ -293,6 +293,11 @@ My notes
         -   when data goes wrong, make it a high priority else it’ll poison later work
 
     -   use testing to limit problems
+
+- coding sensible practices
+    - don't copy/paste magic numbers around your code, instead use the constant-convention with an upper-cased variable like `OFFSET=53.9` and use `OFFSET` throughout your code (rather than `53.9`). This is especially useful if you have two different magic numbers that mean differnets things (e.g. `10` used in two different contexts), having a spelt-out variable makes the intent much when you return to this code months later.
+    - if you find yourself copy/pasting a block of code (e.g. a few lines that make a new database connection or do a common data manipulation) then strongly think about refactoring this into a function, it'll make support easier and your code will get shorter (so there's fewer lines to hide bugs)
+    
 
 -   storing data
 
