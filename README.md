@@ -346,5 +346,6 @@ My notes
 - Building data teams
     - ["The Emerging Role of Data Scientists on Software Development Teams"](http://research.microsoft.com/apps/pubs/default.aspx?id=242286) by Microsoft Research categorises how different team-types might work and how career progression might work
 
-- Talking about Data Science with Customers
+- The business side of delivering data science products
     - ["Delivering Value Throughout the Analytical Process"](http://blog.applied.ai/delivering-value-throughout-the-analytical-process/) by Jon Sedar gives a nice overview of how to talk whilst wearing your business hat
+    - ["From Lab to Factory"](http://slides.com/springcoil/dataproducts-11#/) by Peadar Coyle lists a couple of ways of delivering working products
