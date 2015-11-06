@@ -6,9 +6,9 @@ science products and ways to avoid falling into dark holes of despair. This is b
 very different - if so, file a Bug for me in GitHub and give me
 something to chew on. 
 
-Very roughly these are "notes from me to myself 10 years ago", I hope you find some of this to be useful. I've put this together based on my talking, teaching and coaching along with feedback from chats at our [PyDataLondon](http://www.meetup.com/PyData-London-Meetup/) data group.
+Very roughly these are "notes from me to my-younger-self", I hope you find some of this to be useful. I've put this together based on my talking, teaching and coaching along with feedback from chats at our [PyDataLondon](http://www.meetup.com/PyData-London-Meetup/) monthly meetup. 
 
-By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/)) of [ModelInsight](http://modelinsight.io/)
+By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/)) of [ModelInsight](http://modelinsight.io/) (do get in contact if consuling and coaching might be useful)
 
 License: Creative Commons By Attribution
 
@@ -56,46 +56,6 @@ My notes
 
         -   write validators that check for bad data - run them regularly, report exceptions to the specification, treat this as a _red flag_ event and try to get to the source of the problem (and patch up broken data before you forget about it)
 
-    - dirty text data
-
-        -   cleaning broken text
-
-            -   [ftfy](https://github.com/LuminosoInsight/python-ftfy) to fix bad encodings
-
-            -   poor specification of encoding - requires some checking on your part to make sensible guesses - often text "looks like" UTF8 but might actually be encoded in Windows [CP-1252](https://en.wikipedia.org/wiki/Windows-1252) which encodes smart-quotes differently to disk
-            - [Chromium Compact Language Detector](https://pypi.python.org/pypi/chromium_compact_language_detector/) - identifies human language type
-
-            -   HTML entity decoding (Python's [unescape](https://docs.python.org/3/library/html.html) does a sensible job for the basic entities)
-
-        -   normalising unicode variants (text, punctuation)
-
-            - problems for decoding non-English alphabets like the [Turkish Double I](https://en.wikipedia.org/wiki/Dotted_and_dotless_I) and the (horrible) associated stories of murder on that page
-            -   variants of dash (e.g. 40 variants are [listed](https://en.wikipedia.org/wiki/Dash)) and white space (including non-breaking whitespace, [examples](https://en.wikipedia.org/wiki/Whitespace_character)), `and &`, `copyright ©` etc
-
-        - normalising synonyms
-            - probably having many synonymous words for the same "thing" you're working on is a bad idea (e.g. company name variants like RBS and The Royal Bank of Scotland, and product name variants like MS VC 2000 and Microsoft Visual Studio 2000) as the variants water down the signal, you should probably map these to canonical representations to reduce the variation in labelling. This only applies if you want the aggregate signal for the "common items" rather than the exact signal for each named variation
-            - [ish](https://github.com/judy2k/ish) has synonyms for common terms like "yes, yep, yup, ..."
-            - [unidecode](https://pypi.python.org/pypi/Unidecode) strips "funny accents" to remove variation in your text, this is useful if people write the same thing in different ways (e.g. Société Générale and Societe Generale will both be written by regular people to mean the same company)
-
-        - normalising text terms
-            - often names can be written in different orders e.g. "Ian Ozsvald" and (in Hungary) "Ozsvald Ian", with no other indication of the reversed encoding
-
-        -   normalising weights and measures
-
-            -   astropy etc?
-
-            -   no tool to recognise these?
-
-        - encoding text categories for machine learning
-            - Pandas has a [get_dummies](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.get_dummies.html) which performs naieve encoding
-            - [Patsy](http://statsmodels.sourceforge.net/devel/contrasts.html) has a richer set of encoding options and tries to remove redundant encodings
-
-    - dirty numeric data
-
-        -   numeric outliers for normally distributed numbers - checking the values outside of a couple of standard deviations is a sane starting point
-        - checking for outliers in a non-stationery dataset (e.g. a time series of prices) is trickier (READER - what's a good starting point?)
-
-        -   check for text-encoded numbers like NaN and INFINITY, they confuse things when parsed!
 
 
     -   exploration
@@ -154,6 +114,48 @@ My notes
         - [The cost of bad data: stats](https://econsultancy.com/blog/64612-the-cost-of-bad-data-stats/)
 
         - [Enterprises Don’t Have Big Data, They Just Have Bad Data](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)
+
+- dealing with dirty data
+    - dirty text data
+
+        -   cleaning broken text
+
+            -   [ftfy](https://github.com/LuminosoInsight/python-ftfy) to fix bad encodings
+
+            -   poor specification of encoding - requires some checking on your part to make sensible guesses - often text "looks like" UTF8 but might actually be encoded in Windows [CP-1252](https://en.wikipedia.org/wiki/Windows-1252) which encodes smart-quotes differently to disk
+            - [Chromium Compact Language Detector](https://pypi.python.org/pypi/chromium_compact_language_detector/) - identifies human language type
+
+            -   HTML entity decoding (Python's [unescape](https://docs.python.org/3/library/html.html) does a sensible job for the basic entities)
+
+        -   normalising unicode variants (text, punctuation)
+
+            - problems for decoding non-English alphabets like the [Turkish Double I](https://en.wikipedia.org/wiki/Dotted_and_dotless_I) and the (horrible) associated stories of murder on that page
+            -   variants of dash (e.g. 40 variants are [listed](https://en.wikipedia.org/wiki/Dash)) and white space (including non-breaking whitespace, [examples](https://en.wikipedia.org/wiki/Whitespace_character)), `and &`, `copyright ©` etc
+
+        - normalising synonyms
+            - probably having many synonymous words for the same "thing" you're working on is a bad idea (e.g. company name variants like RBS and The Royal Bank of Scotland, and product name variants like MS VC 2000 and Microsoft Visual Studio 2000) as the variants water down the signal, you should probably map these to canonical representations to reduce the variation in labelling. This only applies if you want the aggregate signal for the "common items" rather than the exact signal for each named variation
+            - [ish](https://github.com/judy2k/ish) has synonyms for common terms like "yes, yep, yup, ..."
+            - [unidecode](https://pypi.python.org/pypi/Unidecode) strips "funny accents" to remove variation in your text, this is useful if people write the same thing in different ways (e.g. Société Générale and Societe Generale will both be written by regular people to mean the same company)
+
+        - normalising text terms
+            - often names can be written in different orders e.g. "Ian Ozsvald" and (in Hungary) "Ozsvald Ian", with no other indication of the reversed encoding
+
+        -   normalising weights and measures
+
+            -   astropy etc?
+
+            -   no tool to recognise these?
+
+        - encoding text categories for machine learning
+            - Pandas has a [get_dummies](http://pandas.pydata.org/pandas-docs/stable/generated/pandas.get_dummies.html) which performs naieve encoding
+            - [Patsy](http://statsmodels.sourceforge.net/devel/contrasts.html) has a richer set of encoding options and tries to remove redundant encodings
+
+    - dirty numeric data
+
+        -   numeric outliers for normally distributed numbers - checking the values outside of a couple of standard deviations is a sane starting point
+        - checking for outliers in a non-stationery dataset (e.g. a time series of prices) is trickier (READER - what's a good starting point?)
+
+        -   check for text-encoded numbers like NaN and INFINITY, they confuse things when parsed!
 
 -   solving problems with data
 
