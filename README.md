@@ -337,19 +337,19 @@ My notes
     
 -   useful python tools
 
-    -   anaconda environments
+    -   [anaconda](https://www.continuum.io/why-anaconda) environments
 
-    -   ipython
+    -   [ipython](https://ipython.org/) - interactive Python shell
 
-    -   jupyter notebook
+    -   [jupyter](http://jupyter.org/) notebook (and consider `%connect_info` (sort-of [example](https://ipython.org/ipython-doc/2/parallel/magics.html#engines-as-kernels) to connect a Notebook's kernel with a console interface)
 
     -   argparse and os.env to get default configurations from environment
 
-    -   progressbar33 / tqdm
+    -   [progressbar33](https://github.com/germangh/python-progressbar) / [tqdm](https://github.com/noamraph/tqdm)
 
-    -   ipython\_memory\_checker
+    -   [ipython_memory_usage](https://github.com/ianozsvald/ipython_memory_usage) - diagnose line-by-line RAM usage in an IPython session
 
-    -   jc
+    -   [jq](https://stedolan.github.io/jq/) - excellent JSON parser
 
 -   higher performance python
 
