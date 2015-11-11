@@ -80,6 +80,7 @@ My notes
         -   Configuration (make it run on other machines e.g. for colleagues or for deployment or other configurations like test, staging and deployment)
 
         -   Modules (use `__init__.py` in folders to group code into logical units)
+            - See my [template](https://github.com/ianozsvald/python_template_with_config) for examples of a working module with *tests* and a *config*
 
         -   Packages (make your code distributable using `setup.py`)
 
