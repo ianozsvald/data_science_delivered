@@ -88,8 +88,16 @@ My notes
             - You'll have more confidence in your code
             - When refactoring you'll know if your code still does what it was supposed to
             - When you upgrade libraries (e.g. new Python libraries or major Python versions) you'll be confident that your code still does the same job that it did before
+            -   [py.test](http://pytest.org/latest/) to write cleaner tests than with Python's built-in `unittest.py` tests
+                - you can run `py.test -s` to see `stdout` (which otherwise is hidden unless the tests fail) and `py.test -s -pdb` to drop into the Python debugger on a failure (so you get dropped in to [pdb](https://docs.python.org/3/library/pdb.html) to do live debugging)
+
+            -   [coverage](https://pypi.python.org/pypi/coverage) to figure out if you're actually testing all of your code (so you can figure out which bits need the urgent addition of tests!)
+
+            -   [hypothesis](https://github.com/DRMacIver/hypothesis) for fuzzing your unit tests and finding blind spots you missed (use this in _addition_ to your regular tests, not as a replacment for them)
+
 
         -   Data integrity tests (make sure your data actually contains what you expect - you can easily ignore this step and easily write a solution that lies to you - _be very wary of skipping this_)
+            -   [engarde](https://github.com/TomAugspurger/engarde) to add constraints to your DataFrames
 
         -   Speed of iteration (it gets slower as the code gets bigger, it is also likely that more bugs slip in which occasionally will _really_ slow you down)
 
@@ -257,14 +265,6 @@ My notes
 
     -   adding tests
 
-        -   [py.test](http://pytest.org/latest/) to write cleaner tests than with Python's built-in `unittest.py` tests
-            - you can run `py.test -s` to see `stdout` (which otherwise is hidden unless the tests fail) and `py.test -s -pdb` to drop into the Python debugger on a failure (so you get dropped in to [pdb](https://docs.python.org/3/library/pdb.html) to do live debugging)
-
-        -   [coverage](https://pypi.python.org/pypi/coverage) to figure out if you're actually testing all of your code (so you can figure out which bits need the urgent addition of tests!)
-
-        -   [hypothesis](https://github.com/DRMacIver/hypothesis) for fuzzing your unit tests and finding blind spots you missed (use this in _addition_ to your regular tests, not as a replacment for them)
-
-        -   [engarde](https://github.com/TomAugspurger/engarde) to add constraints to your DataFrames
 
     -   making a package
 
