@@ -73,6 +73,8 @@ My notes
 
         -   Reporting results (tell a story, get someone to validate your assumptions, do a code review as a sanity check)
 
+        - Using source-control (e.g. github.com), don't be slow to keep a history of edits and to sync off-site
+
         -   Pickles (you'll have partial results you want to store, a `pickle` is a reasonable way to store early-stage results)
 
         -   Configuration (make it run on other machines e.g. for colleagues or for deployment or other configurations like test, staging and deployment)
@@ -82,6 +84,9 @@ My notes
         -   Packages (make your code distributable using `setup.py`)
 
         -   Testing (check `unittest.py` and [py.test](http://pytest.org/latest/))
+            - You'll have more confidence in your code
+            - When refactoring you'll know if your code still does what it was supposed to
+            - When you upgrade libraries (e.g. new Python libraries or major Python versions) you'll be confident that your code still does the same job that it did before
 
         -   Data integrity tests (make sure your data actually contains what you expect - you can easily ignore this step and easily write a solution that lies to you - _be very wary of skipping this_)
 
