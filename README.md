@@ -253,22 +253,6 @@ My notes
             - don't be in a rush to go to complex models and features sets until you know why you need the complexity
             - tfidf scaling is useful for variable length documents (e.g. pages of wikipedia text) but if your text is roughly the same length (e.g. tweets) then scaling is less useful
 
--   building useful tools
-
-    -   starting with scripts
-
-    -   modularising
-
-    -   config.py - centralise file/db access to few functions
-
-    -   adding tests
-
-
-    -   making a package
-
-    -   scratch and scratch\_local
-
-    -   routes to distribution
 
 -   delivering working products
 
@@ -284,20 +268,38 @@ My notes
 
     - deployment options to machines:
         - Amazon EC2 / other cloud providers, probably using Docker
-        - [Featherweight](https://github.com/ianozsvald/featherweight_web_api) super lightweight server for publishing R&D Python functions as JSON web functions
         - [YHatHQ](http://www.yhathq.com/) @springcoil [has notes](https://speakerdeck.com/springcoil/putting-data-science-models-into-production)
+    
+    - deployment technologies:
+        - use github to pull onto a target machine - useful at first for small scale deployments, not useful for automation
+        - docker - useful for fully-built and reproducible builds
+
+    - building a web-based API:
+        - [Featherweight](https://github.com/ianozsvald/featherweight_web_api) super lightweight server for publishing R&D Python functions as JSON web functions
         - [Flask](http://flask.pocoo.org/) with Swagger documentation
         - [Django REST](http://www.django-rest-framework.org/)
         - [Eve](http://python-eve.org/) - Python + Flask and Mongo or SQL storage
 
 - storing data
     - add constraints to your datastore whenever possible, probably they're granular (e.g. text only with N characters, ints-only and Nulls are allowed) with the wrong level of granularity (you might want lower-case hex-like ASCII UUID strings only or positive numbers for addresses within a certain range), but some constraints are *much better* than no constraints. Constraints between key fields in tables are also very sensible.
+    -   pickles of `dicts` are good for persisting python objects
+
+        - add a timestamp and maybe a git commit for traceability and a notes key in a `dict` along with your data (which might be `numpy` arrays, `dataframes` etc)
+        - have a script that visits all your pickles, loads them in and reports the build-time, label and notes so you can quickly check what's deployed 
     - MySQL
         - Unicode text is 3-byte `utf8` by default (so it only encodes the Basic Multilingual Plane and not the Supplementary Planes) and so silently loses data that doesn't look "Western-like", use [`utf8mb4`](https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html) instead
 
     - MongoDB
         - Schemaless by default (this hopefully changes in 2015), this makes it quick for iteration and rubbish for data integrity later when you have an engineering mindset (write your own validation & reporting code that checks your schema is met to avoid going crazy)
         - [Monary](https://monary.readthedocs.org/) lets you read MongoDB data->Python around 10* faster ([talk](https://github.com/braz/pycon2015_talk))
+    -   dense and sparse matrices
+
+        -   numpy arrays have a single type
+
+        -   scipy.sparse is excellent for sparse data
+
+        -   you can store sparse data on disk with hdf5 and compression
+
 
 -   engineering concerns (how stuff goes wrong)
 
@@ -335,22 +337,6 @@ My notes
     - don't copy/paste magic numbers around your code, instead use the constant-convention with an upper-cased variable like `OFFSET=53.9` and use `OFFSET` throughout your code (rather than `53.9`). This is especially useful if you have two different magic numbers that mean differnets things (e.g. `10` used in two different contexts), having a spelt-out variable makes the intent much clearer when you return to this code months later.
     - if you find yourself copy/pasting a block of code (e.g. a few lines that make a new database connection or do a common data manipulation) then strongly think about refactoring this into a function, it'll make support easier and your code will get shorter (so there's fewer lines to hide bugs)
     
-
--   storing data
-
-    -   dense and sparse matrices
-
-        -   numpy arrays have a single type
-
-        -   scipy.sparse is excellent for sparse data
-
-        -   you can store sparse data on disk with hdf5 and compression
-
-    -   pickles of `dicts` are good for persisting python objects
-
-        - add a timestamp and maybe a git commit for traceability and a notes key in a `dict` along with your data (which might be `numpy` arrays, `dataframes` etc)
-        - have a script that visits all your pickles, loads them in and reports the build-time, label and notes so you can quickly check what's deployed 
-
 -   useful python tools
 
     -   anaconda environments
