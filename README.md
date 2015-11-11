@@ -90,9 +90,7 @@ My notes
             - When you upgrade libraries (e.g. new Python libraries or major Python versions) you'll be confident that your code still does the same job that it did before
             -   [py.test](http://pytest.org/latest/) to write cleaner tests than with Python's built-in `unittest.py` tests
                 - you can run `py.test -s` to see `stdout` (which otherwise is hidden unless the tests fail) and `py.test -s -pdb` to drop into the Python debugger on a failure (so you get dropped in to [pdb](https://docs.python.org/3/library/pdb.html) to do live debugging)
-
             -   [coverage](https://pypi.python.org/pypi/coverage) to figure out if you're actually testing all of your code (so you can figure out which bits need the urgent addition of tests!)
-
             -   [hypothesis](https://github.com/DRMacIver/hypothesis) for fuzzing your unit tests and finding blind spots you missed (use this in _addition_ to your regular tests, not as a replacment for them)
 
 
