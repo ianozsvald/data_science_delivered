@@ -295,9 +295,7 @@ My notes
     -   dense and sparse matrices
 
         -   numpy arrays have a single type
-
-        -   scipy.sparse is excellent for sparse data
-
+        -   [scipy.sparse](https://docs.scipy.org/doc/scipy/reference/sparse.html) is excellent for sparse data - if you have a dense matrix that's larger than RAM then definitely check if you have many (e.g. >30%) zero-based entries, if so you should test the RAM usage of a sparse array
         -   you can store sparse data on disk with hdf5 and compression
 
 
