@@ -216,7 +216,10 @@ My notes
 
             - OLS is surprisingly robust, it is a great starting point
             - After training - predict on the training data, take the worst errors and try to diagnose those
-            - Make a histogram of the values of the response value - is it Normal-like? If it is heavily skewed then maybe you should try to transform it (using a `sqrt` or `log`). With a heavy skew OLS can be skewed in favour of trying to fit the few outliers rather than the body of mostly-not-skewed values
+            - Make a histogram of the values of the response value - is it Normal-like? If it is heavily skewed then maybe you should try to transform it (using a `sqrt` or `log`). With a heavy skew OLS can be skewed in favour of trying to fit the few outliers rather than the body of mostly-not-skewed values. Remember to measure your training error on the un-transformed data (else you can't compare it to the error on the non-transformed previous version)
+
+    - feature diagnosis
+        - TODO
 
 
 
