@@ -130,8 +130,8 @@ My notes
         - a sane schema
             - reasonable value ranges
             - sensible between-table relationships are represented
-            - no lies!
-            - sensible use of `null` and `0` to represent missing or zero values
+            - no (or few) lies in the data!
+            - sensible use of `null` and `0` to represent missing and zero values
 
     - R&D on dirty data
         - transform the raw dirty data into a cleaned research-ready dataset
@@ -214,7 +214,10 @@ My notes
 
         -   diagnosis tips:
 
-            -   &lt;TODO&gt;
+            - OLS is surprisingly robust, it is a great starting point
+            - After training - predict on the training data, take the worst errors and try to diagnose those
+            - Make a histogram of the values of the response value - is it Normal-like? If it is heavily skewed then maybe you should try to transform it (using a `sqrt` or `log`). With a heavy skew OLS can be skewed in favour of trying to fit the few outliers rather than the body of mostly-not-skewed values
+
 
 
     - (Unit) Testing on scikit-learn models
