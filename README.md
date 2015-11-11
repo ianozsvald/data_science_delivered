@@ -122,6 +122,22 @@ My notes
         - [Enterprises Don’t Have Big Data, They Just Have Bad Data](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)
 
 - dealing with dirty data
+    - what clean data might look like (this is very problem specific!)
+        - no pure duplicates
+        - few or no near-duplicates (e.g. repeated records with typos or minor changes)
+        - values that are normalised w.r.t. your problem
+            - e.g. if you're working on a data-augmentation problem you'll need some dirty data but if you're regressing then you'll want clean data so you can solve your regression challenge
+        - a sane schema
+            - reasonable value ranges
+            - sensible between-table relationships are represented
+            - no lies!
+            - sensible use of `null` and `0` to represent missing or zero values
+
+    - R&D on dirty data
+        - transform the raw dirty data into a cleaned research-ready dataset
+        - you want clean data when you solve your challenge
+        - you can robustify your research code for deployment by taking the relevant cleaning code and integrating it into your production system
+
     - talks on dirty data
         - ["Dirty Data"](http://www.slideshare.net/godatadriven/dirty-data-by-friso-van-vollenhoven) by Friso van Vollenhoven (notes the Icelandic Thorn issue, bad date encodinngs)
         - ["Cleaning Confused Collections of Characters"](http://ianozsvald.com/2015/04/03/pydataparis-2015-and-cleaning-confused-collections-of-characters/) my thoughts on ways through extracting and cleaning text
