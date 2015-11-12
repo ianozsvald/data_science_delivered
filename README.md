@@ -8,6 +8,8 @@ something to chew on.
 
 Very roughly these are "notes from me to my-younger-self", I hope you find some of this to be useful. I've put this together based on my talking, teaching and coaching along with feedback from chats at our [PyDataLondon](http://www.meetup.com/PyData-London-Meetup/) monthly meetup. 
 
+Put your email in [here for updates](http://ianozsvald.com/building-python-data-science-products/), I'll only mail about updates to this doc.
+
 By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/)) of [ModelInsight](http://modelinsight.io/) (do get in contact if consuling and coaching might be useful)
 
 License: Creative Commons By Attribution
