@@ -130,6 +130,18 @@ My notes
 
         - [Enterprises Don’t Have Big Data, They Just Have Bad Data](http://techcrunch.com/2015/07/01/enterprises-dont-have-big-data-they-just-have-bad-data/)
 
+- dealing with disparate or hard-to-access data
+    - it is common for an organically evolved system to have many datastores (e.g. a MongoDB, a MySQL, some SQLITEs, an Adobe Omniture, Google Analytics) which are loosely coupled where you have to work hard to get data from several datasets
+    - commonly the schemas evolve independently and historic information can be bad at different times for different stores (and this domain info can be stored in an individual's head)
+    - this sort of mix of data causes an *inertia* on research and reporting
+    - possible solutions include
+        - rewriting the storage layers
+            - massive effort, lots of line-systems might require updating
+            - if on-line data products need this view of the data (e.g. for live decisionss on live datasets) then this might be the best option
+        - building a unified approach to extracting all the data and storing it in a new system in a clean and consistent way (e.g. putting it into a Data Warehouse or a Big Data system)
+            - less effort, but more cruft is left in the line-systems
+            - data products can be built off of the new system but remember that this clean view of the data is only available in this data store (not in the live line-system data stores)
+
 - dealing with dirty data
     - what clean data might look like (this is very problem specific!)
         - no pure duplicates
