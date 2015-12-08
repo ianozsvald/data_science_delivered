@@ -34,6 +34,7 @@ My notes
         - keep the scope small and sane (especially if you're not confident about your data or how you'll solve the aspirational goals of the project)
 
     -   deliver a working prototype
+        - it is quite usual to iterate on the data+prototype stage several times, once you've made a prototyped you'll probably discover that the data has problems, as you address those data problems you'll realise you had poor assumptions in the prototype, so you'll iterate. you might get it right first time (and make sure a colleague validates this) but several iterations aren't uncommon.
 
     -   deliver a deployable, maintainable and testable system
 
