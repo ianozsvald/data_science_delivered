@@ -10,7 +10,7 @@ Very roughly these are "notes from me to my-younger-self", I hope you find some 
 
 Put your email in [here for updates](http://ianozsvald.com/building-python-data-science-products/), I'll only mail about updates to this doc.
 
-By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/)) of [ModelInsight](http://modelinsight.io/) (do get in contact if consuling and coaching might be useful)
+By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/)) of [ModelInsight](http://modelinsight.io/) (do get in contact if consulting and coaching might be useful)
 
 License: Creative Commons By Attribution
 
@@ -94,7 +94,7 @@ My notes
             -   [py.test](http://pytest.org/latest/) to write cleaner tests than with Python's built-in `unittest.py` tests
                 - you can run `py.test -s` to see `stdout` (which otherwise is hidden unless the tests fail) and `py.test -s -pdb` to drop into the Python debugger on a failure (so you get dropped in to [pdb](https://docs.python.org/3/library/pdb.html) to do live debugging)
             -   [coverage](https://pypi.python.org/pypi/coverage) to figure out if you're actually testing all of your code (so you can figure out which bits need the urgent addition of tests!)
-            -   [hypothesis](https://github.com/DRMacIver/hypothesis) for fuzzing your unit tests and finding blind spots you missed (use this in _addition_ to your regular tests, not as a replacment for them)
+            -   [hypothesis](https://github.com/DRMacIver/hypothesis) for fuzzing your unit tests and finding blind spots you missed (use this in _addition_ to your regular tests, not as a replacement for them)
 
 
         -   Data integrity tests (make sure your data actually contains what you expect - you can easily ignore this step and easily write a solution that lies to you - _be very wary of skipping this_)
@@ -137,7 +137,7 @@ My notes
     - possible solutions include
         - rewriting the storage layers
             - massive effort, lots of line-systems might require updating
-            - if on-line data products need this view of the data (e.g. for live decisionss on live datasets) then this might be the best option
+            - if on-line data products need this view of the data (e.g. for live decisions on live datasets) then this might be the best option
         - building a unified approach to extracting all the data and storing it in a new system in a clean and consistent way (e.g. putting it into a Data Warehouse or a Big Data system)
             - less effort, but more cruft is left in the line-systems
             - data products can be built off of the new system but remember that this clean view of the data is only available in this data store (not in the live line-system data stores)
@@ -160,7 +160,7 @@ My notes
         - you can robustify your research code for deployment by taking the relevant cleaning code and integrating it into your production system
 
     - talks on dirty data
-        - ["Dirty Data"](http://www.slideshare.net/godatadriven/dirty-data-by-friso-van-vollenhoven) by Friso van Vollenhoven (notes the Icelandic Thorn issue, bad date encodinngs)
+        - ["Dirty Data"](http://www.slideshare.net/godatadriven/dirty-data-by-friso-van-vollenhoven) by Friso van Vollenhoven (notes the Icelandic Thorn issue, bad date encodings)
         - ["Cleaning Confused Collections of Characters"](http://ianozsvald.com/2015/04/03/pydataparis-2015-and-cleaning-confused-collections-of-characters/) my thoughts on ways through extracting and cleaning text
     - dirty text data
 
