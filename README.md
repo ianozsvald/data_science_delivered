@@ -228,8 +228,10 @@ My notes
 
             - Visualise a correlation matrix for your features if you have a small number (e.g. <20 features). You might also visualise the similarities as a force network graph ([photo](https://twitter.com/lc0d3r/status/654226497893453824)) using NetworkX or Gephi.
 
-            - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts. What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels? 
+            - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts (e.g. for a binary classification task take a highly confident wrong class answer from your test set). What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels? 
             - Which classifications always sit on the decision boundary (e.g. items with a 50/50 probability of being in one of two classes)? Why can't the model confidently move the examples to the right class?
+
+            - With many training runs you can plot the coefficients inside a classifier like Logistic Regression (using a boxplot per feature) to see the distribution of the weights. This should show if e.g. some of your feature data has a poor distribution (e.g. if it is non-Normal) and how variable the weights can be.
 
     -   regression
 
@@ -365,6 +367,14 @@ My notes
     -   [ipython_memory_usage](https://github.com/ianozsvald/ipython_memory_usage) - diagnose line-by-line RAM usage in an IPython session
 
     -   [jq](https://stedolan.github.io/jq/) - excellent JSON parser
+
+- useful data cleaning tools
+
+    - [dedupe](https://github.com/datamade/dedupe) DataMade's data dedupe and merge process with online learning
+    - [usa address](https://github.com/datamade/usaddress) DataMade's process to convert USA unstructured addresses into structured data
+    - [probable people](https://github.com/datamade/probablepeople) DataMade's process to convert unstructured Western people names into structured data
+    - [parserator](https://github.com/datamade/parserator) DataMade's tool to make probabilistic parsers
+    - [Data Making Guidelines](https://github.com/datamade/data-making-guidelines) DataMade's guide to a repeatable ETL process
 
 -   higher performance python
 
