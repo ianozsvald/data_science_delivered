@@ -220,6 +220,8 @@ My notes
             -   Andrew Ng's notes
                 [*http://cs229.stanford.edu/materials/ML-advice.pdf*](http://cs229.stanford.edu/materials/ML-advice.pdf)
 
+            - ["A Few Useful Things to Know about Machine Learning"](https://homes.cs.washington.edu/~pedrod/papers/cacm12.pdf), Pedro Domingos - really useful paper to clear up some ML assumptions
+
             -   metrics
                 [*http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/*](http://www.win-vector.com/blog/2015/09/willyourmodelworkpart4/)
             - [Unboxing the Random Forest Classifier: The Threshold Distributions](http://nerds.airbnb.com/unboxing-the-random-forest-classifier/)
