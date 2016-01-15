@@ -230,6 +230,8 @@ My notes
 
             - Visualise a correlation matrix for your features if you have a small number (e.g. <20 features). You might also visualise the similarities as a force network graph ([photo](https://twitter.com/lc0d3r/status/654226497893453824)) using NetworkX or Gephi.
 
+            - Use a [Dummy classifier](http://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html) which classifies based on e.g. the most frequent class seen in the training set, this should reflect the underlying distribution of your classes and any classifier and features you build *must* outperform this (else they're not exploiting any information that may exist!)
+
             - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts (e.g. for a binary classification task take a highly confident wrong class answer from your test set). What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels? 
             - Which classifications always sit on the decision boundary (e.g. items with a 50/50 probability of being in one of two classes)? Why can't the model confidently move the examples to the right class?
 
@@ -268,7 +270,7 @@ My notes
             - lowercased, uni-decoded unigram features
             - bag of words (i.e. without order or frequency counts)
             - Bernulli Naive Bayes (by default scikit learn's BNB takes care of unbalanced data sets)
-            - maybe just use a dummy classifier that uses some regular expressions (i.e. driven by human insight rather than ML) for a super-easy-to-diagnose classification approach
+            - Use a dummy classifier that uses some regular expressions (i.e. driven by human insight rather than ML) for a super-easy-to-diagnose classification approach
             - don't be in a rush to go to complex models and features sets until you know why you need the complexity
             - tfidf scaling is useful for variable length documents (e.g. pages of wikipedia text) but if your text is roughly the same length (e.g. tweets) then scaling is less useful
 
