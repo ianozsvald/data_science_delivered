@@ -259,7 +259,7 @@ My notes
 
         -   tokenising a lower-cased string with whitespace tokenisation and unigrams gets you a long way
 
-        - for two-class text classification (e.g. spam, "is user of typeX") the following configuration is a sane base-case starting point:
+        - for two-class text classification (e.g. spam, "is user of typeX") the following configuration is a sane base-case starting point (this is a Pattern that you might want to follow):
             - assumption - normal-human-possible classification task (i.e. one with lots of redundancy that a regular human can easily solve)
             - lowercased, uni-decoded unigram features
             - bag of words (i.e. without order or frequency counts)
