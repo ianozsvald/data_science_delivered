@@ -372,6 +372,14 @@ My notes
 
     -   [jq](https://stedolan.github.io/jq/) - excellent JSON parser
 
+- IPython Notebook working practices
+
+    - IPython at the console (`ipython`) is great for rapid R&D, typically I use an IPython shell and a VIM terminal as my only editor (VIM tends to exist on all platforms and over the wire and I like being old-skool)
+    - The IPython/Jupyter Notebook is great for sharing content with colleagues and making a historic document for review, it isn't great as an IDE
+    - In the IPython Notebook you can add `%qtconsole` (e.g. `%qtconsole --style=linux` for unix colouring) and it'll open a QTConsole in a new window which shares the same kernel, so you can prototype (and get tooltips and tab completions) in the shell, then copy/paste the useful lines into your Notebook. Plots will work in both the shell and the Notebook - see [details for QTconsole](https://ipython.readthedocs.org/en/stable/interactive/qtconsole.html?highlight=qtconsole)
+    - When plotting you can use `%matplotlib inline` to get static inline plots in the Notebook (as PNGs) or `%matplotlib notebook` to get interactive graphics (e.g. tooltips, zooms) but note that each interactive graphic holds a heavyweight object, by default the Notebook limits to 20 (IIRC) plots before it gives you warnings
+    - Quantopian's [QGrid](https://github.com/quantopian/qgrid) gives an Excel-like interactive grid for Pandas dataframes including sorting and filtering
+
 - useful data cleaning tools
 
     - [dedupe](https://github.com/datamade/dedupe) DataMade's data dedupe and merge process with online learning
