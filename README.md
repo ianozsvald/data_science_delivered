@@ -233,7 +233,7 @@ My notes
             - Use a [Dummy classifier](http://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html) which classifies based on e.g. the most frequent class seen in the training set, this should reflect the underlying distribution of your classes and any classifier and features you build *must* outperform this (else they're not exploiting any information that may exist!)
 
             - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts (e.g. for a binary classification task take a highly confident wrong class answer from your test set). What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels? 
-                - [Example for misclassification diagnosis on the Digits dataset]()
+                - [Example for misclassification diagnosis on the Digits dataset](ml_diagnosis_confusion_matrix_and_worst_example.ipynb)
 
             - Which classifications always sit on the decision boundary (e.g. items with a 50/50 probability of being in one of two classes)? Why can't the model confidently move the examples to the right class?
 
