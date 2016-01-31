@@ -282,6 +282,7 @@ My notes
     -   reporting
 
     -   delivering repeatable read-only datasets
+        - [WaterMark](https://github.com/rasbt/watermark/) marks a Notebook with a datestamp and some system information (including versions of Python, IPython, the compiler, key libraries and a git hash)
 
     -   delivering read-only webservices
 
