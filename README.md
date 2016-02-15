@@ -10,7 +10,7 @@ Very roughly these are "notes from me to my-younger-self", I hope you find some 
 
 Put your email in [here for updates](http://ianozsvald.com/building-python-data-science-products/), I'll only mail about updates to this doc.
 
-By: Ian Ozsvald ([*http://ianozsvald.com/*](http://ianozsvald.com/) [LinkedIn](https://www.linkedin.com/in/ianozsvald)) of [ModelInsight](http://modelinsight.io/) (do get in contact if consulting and coaching might be useful)
+By: Ian Ozsvald ([*http://ianozsvald.com*](http://ianozsvald.com/) - [LinkedIn](https://www.linkedin.com/in/ianozsvald)) of [ModelInsight](http://modelinsight.io/) (do get in contact if consulting and coaching might be useful)
 
 License: Creative Commons By Attribution
 
