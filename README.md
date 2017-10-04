@@ -4,9 +4,9 @@ Data Science Delivered
 About: Short document summarising Ian's thoughts on successful ways to ship working, maintainable and understandable data
 science products and ways to avoid falling into dark holes of despair. This is based on my experience, your experience may be
 very different - if so, file a Bug for me in GitHub and give me
-something to chew on. 
+something to chew on.
 
-Very roughly these are "notes from me to my-younger-self", I hope you find some of this to be useful. I've put this together based on my talking, teaching and coaching along with feedback from chats at our [PyDataLondon](http://www.meetup.com/PyData-London-Meetup/) monthly meetup. 
+Very roughly these are "notes from me to my-younger-self", I hope you find some of this to be useful. I've put this together based on my talking, teaching and coaching along with feedback from chats at our [PyDataLondon](http://www.meetup.com/PyData-London-Meetup/) monthly meetup.
 
 Put your email in [here for updates](http://ianozsvald.com/building-python-data-science-products/), I'll only mail about updates to this doc.
 
@@ -17,7 +17,13 @@ License: Creative Commons By Attribution
 Location:
 [*https://github.com/ianozsvald/data\_science\_delivered*](https://github.com/ianozsvald/data_science_delivered)
 
-Aimed at: Existing data scientists, both for those who are engineers and those who are researchers. 
+Aimed at: Existing data scientists, both for those who are engineers and those who are researchers.
+
+Notes on the associated Jupyter Notebooks:
+
+* Runs using Python 3.4+ with conda
+* pip install git+git://github.com/scikit-learn-contrib/forest-confidence-interval.git
+
 
 My notes
 --------
@@ -232,7 +238,7 @@ My notes
 
             - Use a [Dummy classifier](http://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html) which classifies based on e.g. the most frequent class seen in the training set, this should reflect the underlying distribution of your classes and any classifier and features you build *must* outperform this (else they're not exploiting any information that may exist!)
 
-            - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts (e.g. for a binary classification task take a highly confident wrong class answer from your test set). What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels? 
+            - What classifications are always wrong? Train on your training set and then use either your train or your test set to diagnose which labels in incorrectly predicts (e.g. for a binary classification task take a highly confident wrong class answer from your test set). What's missing? Poor features? Maybe the model is too simplistic? Maybe you have bad labels?
                 - [Example for misclassification diagnosis on the Digits dataset](ml_diagnosis_confusion_matrix_and_worst_example.ipynb)
 
             - Which classifications always sit on the decision boundary (e.g. items with a 50/50 probability of being in one of two classes)? Why can't the model confidently move the examples to the right class?
@@ -293,7 +299,7 @@ My notes
     - deployment options to machines:
         - Amazon EC2 / other cloud providers, probably using Docker
         - [YHatHQ](http://www.yhathq.com/) @springcoil [has notes](https://speakerdeck.com/springcoil/putting-data-science-models-into-production)
-    
+
     - deployment technologies:
         - use github to pull onto a target machine - useful at first for small scale deployments, not useful for automation
         - docker - useful for fully-built and reproducible builds
@@ -309,7 +315,7 @@ My notes
     -   pickles of `dicts` are good for persisting python objects
 
         - add a timestamp and maybe a git commit for traceability and a notes key in a `dict` along with your data (which might be `numpy` arrays, `dataframes` etc)
-        - have a script that visits all your pickles, loads them in and reports the build-time, label and notes so you can quickly check what's deployed 
+        - have a script that visits all your pickles, loads them in and reports the build-time, label and notes so you can quickly check what's deployed
     - MySQL
         - Unicode text is 3-byte `utf8` by default (so it only encodes the Basic Multilingual Plane and not the Supplementary Planes) and so silently loses data that doesn't look "Western-like", use [`utf8mb4`](https://dev.mysql.com/doc/refman/5.5/en/charset-unicode-utf8mb4.html) instead
 
@@ -358,7 +364,7 @@ My notes
 - coding sensible practices
     - don't copy/paste magic numbers around your code, instead use the constant-convention with an upper-cased variable like `OFFSET=53.9` and use `OFFSET` throughout your code (rather than `53.9`). This is especially useful if you have two different magic numbers that mean differnets things (e.g. `10` used in two different contexts), having a spelt-out variable makes the intent much clearer when you return to this code months later.
     - if you find yourself copy/pasting a block of code (e.g. a few lines that make a new database connection or do a common data manipulation) then strongly think about refactoring this into a function, it'll make support easier and your code will get shorter (so there's fewer lines to hide bugs)
-    
+
 -   useful python tools
 
     -   [anaconda](https://www.continuum.io/why-anaconda) environments
@@ -395,7 +401,7 @@ My notes
 
     -   [Numba](http://numba.pydata.org/) compiles Python `numpy` operations (particularly for-loops on `numpy` arrays) using LLVM, this is a very sane first thing to try
     -   [PyPy](http://pypy.org/) works great on non-numpy code, if you have pure-Python CPU-bound code then definitely try PyPY
-    -   `multiprocessing` lets you parallelise stuff on a single machine 
+    -   `multiprocessing` lets you parallelise stuff on a single machine
     - don't be in a rush to go to a cluster-solution (e.g. Spark) unless you really need it, it is fine to rent an Amazon EC2 machine with 32 cores for a couple of dollars an hour using `multiprocessing` and the exact same code will run on your laptop which eases your dev/debug cycle
     - Robert's [line_profiler](https://github.com/rkern/line_profiler) is my go-to profiling tool for speed issues
     - Fabian's [memory_profiler](https://pypi.python.org/pypi/memory_profiler) is my go-to tool for memory-based profiling
