@@ -3,6 +3,8 @@
 # platform: linux-64
 @EXPLICIT
 https://conda.anaconda.org/conda-forge/linux-64/attrs-17.2.0-py36_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/backports-1.0-py36_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/backports.functools_lru_cache-1.4-py36_1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/blas-1.1-openblas.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/bleach-1.5.0-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/ca-certificates-2017.4.17-0.tar.bz2
@@ -49,14 +51,14 @@ https://conda.anaconda.org/conda-forge/linux-64/libtool-2.4.6-0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libxcb-1.12-1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/libxml2-2.9.4-4.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/markupsafe-1.0-py36_0.tar.bz2
-https://conda.anaconda.org/conda-forge/linux-64/matplotlib-2.0.2-py36_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/matplotlib-2.1.0-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/mistune-0.7.4-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/nbconvert-5.2.1-py36_1.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/nbformat-4.3.0-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/ncurses-5.9-10.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/nose-1.3.7-py36_2.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/notebook-5.0.0-py36_0.tar.bz2
-https://conda.anaconda.org/conda-forge/linux-64/numpy-1.13.1-py36_blas_openblas_200.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/numpy-1.13.3-py36_blas_openblas_200.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/openblas-0.2.19-2.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/openssl-1.0.2l-0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/pandas-0.20.3-py36_1.tar.bz2
@@ -83,7 +85,7 @@ https://conda.anaconda.org/conda-forge/linux-64/pyzmq-16.0.2-py36_2.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/qt-5.6.2-3.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/qtconsole-4.3.0-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/readline-6.2-0.tar.bz2
-https://conda.anaconda.org/conda-forge/linux-64/scikit-learn-0.18.2-np113py36_blas_openblas_200.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/scikit-learn-0.19.0-py36_blas_openblas_201.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/scipy-0.19.1-py36_blas_openblas_201.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/seaborn-0.8.0-py36_0.tar.bz2
 https://conda.anaconda.org/conda-forge/linux-64/setuptools-36.2.2-py36_0.tar.bz2
